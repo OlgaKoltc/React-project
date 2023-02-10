@@ -14,7 +14,9 @@ function App() {
 </Header>
 <Main>
   <Card>
-    <Frontside></Frontside>
+    <Frontside>
+      <Word></Word>
+    </Frontside>
     <Backside></Backside>
   </Card>
 </Main>
