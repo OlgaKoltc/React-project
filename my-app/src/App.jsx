@@ -5,6 +5,8 @@ import Frontside from './components/Frontside';
 import Header from './components/Header';
 import Main from './components/Main';
 import Tema from './components/Tema';
+import Card from './components/Card';
+import Word from './components/Word'
 
 function App() {
   return (
