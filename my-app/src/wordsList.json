@@ -1,0 +1,23 @@
+[
+    {
+        "word": "cat",
+        "transcription": "[kæt]",
+        "tema": "животные",
+        "translate": "кот",
+        "level": "Beginner"
+    },
+    {
+        "word": "dog",
+        "transcription": "[dɒɡ]",
+        "tema": "животные",
+        "translate": "собака",
+        "level": "Beginner"
+    },
+    {
+        "word": "salmon",
+        "transcription": "[ˈsæm.ən]",
+        "tema": "животные",
+        "translate": "лосось",
+        "level": "Elementary"
+    }
+]
