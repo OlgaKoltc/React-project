@@ -1,8 +1,13 @@
 import React from 'react';
-import s from '../Backside/Backside.module.scss';
+import st from '../Backside/Backside.module.scss';
 
-export default function Backside() {
+export default function Backside(props) {
   return (
-    <div styleName={s.content}>Backside</div>
+    <div className={st.content}>
+      <div className={st.backside}>
+        <p>{props.transcription}</p>
+        <p>{props.translate}</p>
+      </div>
+    </div>
   )
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import s from './Footer.module.scss'
+import st from './Footer.module.scss'
 
 export default function Footer() {
   return (
-    <div className={s.content}>Footer</div>
+    <div className={st.content}>Footer</div>
   )
 }

@@ -17,6 +17,9 @@ export default function Table() {
                         <button className={st.delete}/> */}
                     </th>
                 </tr>
+                <React.Fragment>
+                    
+                </React.Fragment>
             </thead>
         </table>
     </div>

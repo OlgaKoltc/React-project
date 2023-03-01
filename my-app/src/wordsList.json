@@ -2,21 +2,21 @@
     {
         "word": "cat",
         "transcription": "[kæt]",
-        "tema": "животные",
+        "theme": "животные",
         "translate": "кот",
         "level": "Beginner"
     },
     {
         "word": "dog",
         "transcription": "[dɒɡ]",
-        "tema": "животные",
+        "theme": "животные",
         "translate": "собака",
         "level": "Beginner"
     },
     {
         "word": "salmon",
         "transcription": "[ˈsæm.ən]",
-        "tema": "животные",
+        "theme": "животные",
         "translate": "лосось",
         "level": "Elementary"
     }
