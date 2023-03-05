@@ -1,0 +1,10 @@
+@import '../../style/index.scss';
+
+.container_table {
+    margin: 0 auto;
+    max-width: 90%;
+    width: 100%;
+    min-height: 50vh;
+    border: 2px solid $customLightBlue;
+    ;
+}

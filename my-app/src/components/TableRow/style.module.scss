@@ -1,0 +1,25 @@
+@import '../../style/index.scss';
+
+.container_row {
+    display: flex;
+    color: $customBlue;
+
+    .word,
+    .transcription,
+    .translate {
+
+        flex-basis: 30%;
+        border: 2px solid $customLightBlue;
+        text-align: center;
+        border-top: none;
+        border-left: none;
+    }
+
+    .wrap_btn {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid $customLightBlue;
+    }
+}

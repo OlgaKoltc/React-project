@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "word": "cat",
         "transcription": "[kæt]",
         "theme": "животные",
@@ -7,6 +8,7 @@
         "level": "Beginner"
     },
     {
+        "id": "2",
         "word": "dog",
         "transcription": "[dɒɡ]",
         "theme": "животные",
@@ -14,10 +16,19 @@
         "level": "Beginner"
     },
     {
+        "id": "3",
         "word": "salmon",
         "transcription": "[ˈsæm.ən]",
         "theme": "животные",
         "translate": "лосось",
+        "level": "Elementary"
+    },
+    {
+        "id": "4",
+        "word": "query",
+        "transcription": "[ˈkwɪərɪ]",
+        "theme": "информационные технологии",
+        "translate": "запрос",
         "level": "Elementary"
     }
 ]

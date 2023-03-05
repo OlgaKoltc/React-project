@@ -2,6 +2,7 @@
   font-family: 'Montserrat';
   src: url(../fonts/Montserrat-Medium.ttf)
 }
+
 @font-face {
   font-family: 'Montserrat-b';
   src: url(../fonts/Montserrat-Black.ttf)
@@ -12,8 +13,8 @@ $wordFont: 34px 'Montserrat-b';
 $backsideFont: lighter 20px 'Montserrat';
 $footerFont: 14px 'Montserrat-b';
 
-$headerColor: #4169E1;
-$mainColor:  #0000CD;
+$customLightBlue: #395ece;
+$customBlue: #0000CD;
 $footerColor: #6495ED;
 
 body {

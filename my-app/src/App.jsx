@@ -1,22 +1,18 @@
-import './style/App.scss';
-import Backside from './components/Main/Card/Backside/Backside';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import Card from './components/Main/Card/Card';
-import Word from './components/Main/Card/Word/Word';
+import "./style/App.scss";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Game from "./components/Game/Game";
+import Table from "./components/Table/Table";
 
 function App() {
   return (
     <div className="App">
-<Header/>
-<Main>
-  <Card>
-    <Word/> 
-    <Backside/>
-  </Card>
-</Main>
-<Footer/>
+      <Header />
+      <div className="main">
+        <Game />
+        <Table />
+      </div>
+      <Footer />
     </div>
   );
 }
