@@ -4,3 +4,13 @@
     font: $headerFont;
     color: $customLightBlue;
 }
+
+.logo {
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+
+    .img {
+        width: 50vh;
+    }
+}

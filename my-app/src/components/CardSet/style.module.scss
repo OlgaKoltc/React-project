@@ -1,0 +1,21 @@
+@import '../../style/index.scss';
+
+.container_card {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+
+    .card_btn {
+        background-color: $btnColor;
+        color: $customBlue;
+        width: 60px;
+        height: 25px;
+        text-align: center;
+        border-radius: 10%;
+    }
+}

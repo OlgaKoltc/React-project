@@ -30,5 +30,13 @@
         "theme": "информационные технологии",
         "translate": "запрос",
         "level": "Elementary"
+    },
+    {
+        "id": "5",
+        "word": "template",
+        "transcription": "[ˈtempleɪt]",
+        "theme": "информационные технологии",
+        "translate": "шаблон",
+        "level": "Elementary"
     }
 ]
