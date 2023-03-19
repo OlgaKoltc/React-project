@@ -1,0 +1,41 @@
+@import '../../style/index.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  text-align: center;
+  background-image: url(../../style/img/projectfon.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 20%;
+  padding-top: 20px;
+
+}
+
+footer {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  font: $headerFont;
+  color: $customLightBlue;
+
+
+  a.active {
+    font: $backsideFont;
+    color: $customBlue;
+  }
+}
+
+.active {
+  font: $backsideFont;
+  color: $customBlue;
+}

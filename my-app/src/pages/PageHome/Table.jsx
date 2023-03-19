@@ -1,7 +1,7 @@
 import React from "react";
 import word from "../../wordsList.json";
 import st from "./style.module.scss";
-import TableRow from "../TableRow/TableRow";
+import TableRow from "../../components/TableRow/TableRow";
 
 export default function Table() {
   return (
