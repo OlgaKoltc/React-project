@@ -54,3 +54,8 @@
         transform: scale(1.0);
     }
 }
+
+.card_btn:focus {
+    outline: 2px solid rgb(138, 26, 26);
+
+}

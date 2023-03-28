@@ -14,12 +14,22 @@ function App() {
   return (
     <Router>
       <div className={st.container}>
-        <header>
+        <header className={st.header}>
           <NavLink to="/">
             <img src={logo} width={70} height={70} />
           </NavLink>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/game">Game</NavLink>
+          <NavLink
+            style={({ isActive }) => ({ color: isActive ? "red" : "blue" })}
+            to="/"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => ({ color: isActive ? "red" : "blue" })}
+            to="/game"
+          >
+            Game
+          </NavLink>
         </header>
         <div className={st.main}>
           <Routes>
@@ -30,7 +40,9 @@ function App() {
           </Routes>
         </div>
         <footer>
-          <p>footer</p>
+          <h4>LearnEnglish</h4>
+          <p>Just learn it</p>
+          <p>e-mail: LearnEnglish@gmail.com</p>
         </footer>
       </div>
     </Router>

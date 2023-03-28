@@ -9,33 +9,27 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-}
+  .header {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 20%;
+    padding-top: 20px;
 
-header {
-  display: flex;
-  justify-content: space-around;
-  flex-basis: 20%;
-  padding-top: 20px;
+  }
 
-}
+  footer {
 
-footer {
-  flex-grow: 1;
-}
-
-a {
-  text-decoration: none;
-  font: $headerFont;
-  color: $customLightBlue;
-
-
-  a.active {
+    flex-grow: 1;
     font: $backsideFont;
-    color: $customBlue;
+    color: $customLightBlue;
+
+    p {
+      font-size: 14px;
+    }
   }
 }
 
-.active {
-  font: $backsideFont;
-  color: $customBlue;
+.header a {
+  text-decoration: none;
+  font: $headerFont;
 }

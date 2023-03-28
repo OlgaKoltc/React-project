@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import st from "./style.module.scss";
 
-export default function Card({ card }, count) {
+export default function Card({ card, count, onChangeCard }) {
   const { word, transcription, translate, theme, id } = card;
   const [checked, setChecked] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    ref.current.focus();
+  }, [count]);
 
   const handleChange = () => {
     setChecked(!checked);
+    //handleCount();
   };
 
   return (
@@ -20,7 +26,7 @@ export default function Card({ card }, count) {
             <div className={st.translate}>{translate}</div>
           </div>
         ) : (
-          <button className={st.card_btn} onClick={handleChange}>
+          <button className={st.card_btn} ref={ref} onClick={handleChange}>
             Проверить
           </button>
         )}
