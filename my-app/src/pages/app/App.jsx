@@ -15,21 +15,23 @@ function App() {
     <Router>
       <div className={st.container}>
         <header className={st.header}>
-          <NavLink to="/">
-            <img src={logo} width={70} height={70} />
-          </NavLink>
-          <NavLink
-            style={({ isActive }) => ({ color: isActive ? "red" : "blue" })}
-            to="/"
-          >
-            Home
-          </NavLink>
-          <NavLink
-            style={({ isActive }) => ({ color: isActive ? "red" : "blue" })}
-            to="/game"
-          >
-            Game
-          </NavLink>
+          <div className={st.nav}>
+            <NavLink to="/">
+              <img src={logo} width={70} height={70} />
+            </NavLink>
+            <NavLink
+              style={({ isActive }) => ({ color: isActive ? "red" : "blue" })}
+              to="/"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              style={({ isActive }) => ({ color: isActive ? "red" : "blue" })}
+              to="/game"
+            >
+              Game
+            </NavLink>
+          </div>
         </header>
         <div className={st.main}>
           <Routes>
@@ -40,9 +42,11 @@ function App() {
           </Routes>
         </div>
         <footer>
-          <h4>LearnEnglish</h4>
-          <p>Just learn it</p>
-          <p>e-mail: LearnEnglish@gmail.com</p>
+          <div className={st.footer__block}>
+            <h4>LearnEnglish</h4>
+            <p>Just learn it</p>
+            <p>e-mail: LearnEnglish@gmail.com</p>
+          </div>
         </footer>
       </div>
     </Router>

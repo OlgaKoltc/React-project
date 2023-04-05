@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import st from "./style.module.scss";
 
-export default function Card({ card, count, onChangeCard }) {
+export default function Card({ card, count, handleCount }) {
   const { word, transcription, translate, theme, id } = card;
   const [checked, setChecked] = useState(false);
   const ref = useRef();
 
   useEffect(() => {
     ref.current.focus();
-  }, [count]);
+  }, []);
 
   const handleChange = () => {
     setChecked(!checked);
-    //handleCount();
+    handleCount();
   };
 
   return (

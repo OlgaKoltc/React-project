@@ -7,7 +7,7 @@ export default function CardSet() {
   const [count, setCount] = useState(0);
   const [quantity, setQuantity] = useState(0);
 
-  //useEffect(() => (onChangeCard(), [count]);
+  //useEffect(() => (onChangeCard(), [count]));
 
   const handleCount = () => setQuantity((quantity) => quantity + 1);
 
@@ -32,17 +32,13 @@ export default function CardSet() {
           Назад
         </button>
         <div className={st.card_word}>
-          <Card
-            card={word[count]}
-            count={quantity}
-            onChangeCard={handleCount}
-          />
+          <Card card={word[count]} count={quantity} handleCount={handleCount} />
         </div>
         <button className={st.card_btn} onClick={handleNext}>
           Вперед
         </button>
       </div>
-      <div className={st.card_count}>Вы выучили {quantity} слов</div>
+      <div className={st.card_count}>выученных слов: {quantity} шт</div>
     </>
   );
 }

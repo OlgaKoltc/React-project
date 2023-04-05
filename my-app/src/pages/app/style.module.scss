@@ -6,14 +6,24 @@
   height: 90vh;
   text-align: center;
   background-image: url(../../style/img/projectfon.jpeg);
-  background-size: cover;
+
   background-repeat: no-repeat;
+  background-size: 100% 100%;
+
 
   .header {
-    display: flex;
-    justify-content: space-around;
     flex-basis: 20%;
     padding-top: 20px;
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 90vw;
+      margin: 0 auto;
+      background-color: rgba(221, 13, 131, 0.2);
+      margin-bottom: 20px;
+    }
 
   }
 
@@ -24,7 +34,16 @@
     color: $customLightBlue;
 
     p {
-      font-size: 14px;
+      font: $footerFont;
+    }
+
+    .footer__block {
+      width: 90vw;
+      margin: 0 auto;
+      background-color: rgba(150, 188, 238, 0.2);
+      padding: 10px 0px 10px 0px;
+      margin-bottom: 20px;
+      margin-top: 20px;
     }
   }
 }
@@ -32,4 +51,8 @@
 .header a {
   text-decoration: none;
   font: $headerFont;
+}
+
+.header a:hover {
+  text-decoration: underline;
 }
