@@ -1,20 +1,24 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import st from "./style.module.scss";
 
 export default function TableRow({ item }) {
   const [isEdit, setIsEdit] = useState(true);
   const { word, transcription, translate } = item;
-  const [defaultValue, editDefaultValue] = useState({
-    word: item.word,
-    transcription: item.transcription,
-    translate: item.translate,
-  });
+  const [defaultValue, editDefaultValue] = useState({});
+
+  useEffect(() => {
+    editDefaultValue({
+      word: item.word,
+      transcription: item.transcription,
+      translate: item.translate,
+    });
+  }, []);
 
   const getEditWord = () => {
     setIsEdit(!isEdit);
   };
-  const saveWord = () => {
-    if (defaultValue == " ") {
+  const saveWord = (e) => {
+    if (e.target.value == " ") {
       console.log("error");
     } else {
       setIsEdit(!isEdit);
@@ -43,17 +47,17 @@ export default function TableRow({ item }) {
         <>
           <input
             className={st.word}
-            defaultValue={defaultValue.word}
+            value={defaultValue.word}
             onChange={handleChange}
           />
           <input
             className={st.transcription}
-            defaultValue={defaultValue.transcription}
+            value={defaultValue.transcription}
             onChange={handleChange}
           />
           <input
             className={st.translate}
-            defaultValue={defaultValue.translate}
+            value={defaultValue.translate}
             onChange={handleChange}
           />
           <div className={st.wrap_btn}>

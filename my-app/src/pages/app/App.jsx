@@ -5,7 +5,6 @@ import {
   Route,
   NavLink,
 } from "react-router-dom";
-// import Logo from "../../components/Logo/Logo";
 import { Table, Game } from "../index";
 import st from "./style.module.scss";
 import logo from "../../style/img/logo.svg";
