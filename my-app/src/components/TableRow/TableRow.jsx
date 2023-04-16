@@ -3,42 +3,43 @@ import st from "./style.module.scss";
 
 export default function TableRow({ item }) {
   const [isEdit, setIsEdit] = useState(true);
-  const { word, transcription, translate } = item;
-  const [defaultValue, editDefaultValue] = useState({});
-
-  useEffect(() => {
-    editDefaultValue({
-      word: item.word,
-      transcription: item.transcription,
-      translate: item.translate,
-    });
-  }, []);
+  const { english, transcription, russian, id } = item;
+  const [valueImput, setValueImput] = useState();
+  const [word, setWord] = useState([]);
 
   const getEditWord = () => {
     setIsEdit(!isEdit);
   };
-  const saveWord = (e) => {
-    if (e.target.value == " ") {
-      console.log("error");
+
+  function saveWord() {
+    if (valueImput == "") {
+      //el.classList.add("error");
+      console.log("error"); //не знаю как добавить красную рамку конкретному импуту
     } else {
       setIsEdit(!isEdit);
+      getWord();
     }
-  };
+  }
 
-  const handleChange = (e) => {
-    editDefaultValue({
-      ...defaultValue,
-      [e.target.name]: e.target.value.toLowerCase(),
-    });
+  function handleChange(event) {
+    setValueImput(event.target.value);
+  }
+
+  //тут была идея добавить в массив откорректированное слово из импута
+  const getWord = () => {
+    let wordValue = valueImput;
+    let words = [...word, wordValue];
+    setWord(words);
+    console.log(words);
   };
 
   return (
     <div className={st.container_row}>
       {isEdit ? (
         <>
-          <div className={st.word}>{word}</div>
+          <div className={st.word}>{english}</div>
           <div className={st.transcription}>{transcription}</div>
-          <div className={st.translate}>{translate}</div>
+          <div className={st.translate}>{russian}</div>
           <div className={st.wrap_btn}>
             <button onClick={getEditWord}>Edit</button>
           </div>
@@ -46,18 +47,21 @@ export default function TableRow({ item }) {
       ) : (
         <>
           <input
+            type="text"
             className={st.word}
-            value={defaultValue.word}
+            defaultValue={english}
             onChange={handleChange}
           />
           <input
+            type="text"
             className={st.transcription}
-            value={defaultValue.transcription}
+            defaultValue={transcription}
             onChange={handleChange}
           />
           <input
+            type="text"
             className={st.translate}
-            value={defaultValue.translate}
+            defaultValue={russian}
             onChange={handleChange}
           />
           <div className={st.wrap_btn}>
