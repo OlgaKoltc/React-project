@@ -5,11 +5,25 @@ export default function TableRow({ item }) {
   const [isEdit, setIsEdit] = useState(true);
   const { english, transcription, russian, id } = item;
   const [valueImput, setValueImput] = useState();
-  const [word, setWord] = useState([]);
+  const [words, setWords] = useState({});
 
   const getEditWord = () => {
     setIsEdit(!isEdit);
   };
+
+  useEffect(() => {
+    let words = {
+      english: item.english,
+      transcription: item.transcription,
+      russian: item.russian,
+    };
+
+    // let words = [item.id, item.english, item.transcription, item.russian];
+    // setWords(words);
+
+    setWords(words);
+    console.log(words);
+  }, []);
 
   function saveWord() {
     if (valueImput == "") {
@@ -28,9 +42,8 @@ export default function TableRow({ item }) {
   //тут была идея добавить в массив откорректированное слово из импута
   const getWord = () => {
     let wordValue = valueImput;
-    let words = [...word, wordValue];
-    setWord(words);
-    console.log(words);
+    setValueImput(wordValue);
+    console.log(wordValue);
   };
 
   return (
