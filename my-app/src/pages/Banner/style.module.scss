@@ -1,0 +1,12 @@
+@import '../../style/vars.scss';
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    .text {
+        width: 100vh;
+p {
+color: $customLightBlue;
+}
+    }
+}

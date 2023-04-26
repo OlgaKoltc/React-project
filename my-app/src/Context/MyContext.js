@@ -8,9 +8,15 @@ export function ContextProvider({ children }) {
 
     useEffect(() => {
         async function getPost() {
-            const resp = await fetch('http://itgirlschool.justmakeit.ru/api/words');
-            const words = await resp.json()
-            setData(words)
+            try {
+                const resp = await fetch('http://itgirlschool.justmakeit.ru/api/words');
+                const words = await resp.json()
+                setData(words)
+            }
+            catch (err) {
+                console.error(err);
+            }
+
         }
         getPost()
     }, [])
