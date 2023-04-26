@@ -1,10 +1,9 @@
-@import '../../style/index.scss';
 @import '../../style/vars.scss';
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 100vh;
   text-align: center;
   background-image: url(../../style/img/projectfon.jpeg);
 

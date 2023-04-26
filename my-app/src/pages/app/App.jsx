@@ -8,6 +8,7 @@ import {
 import { Table, Game } from "../index";
 import st from "./style.module.scss";
 import logo from "../../style/img/logo.svg";
+import Banner from "../Banner/Banner";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             </NavLink>
             <NavLink
               style={({ isActive }) => ({ color: isActive ? "red" : "blue" })}
-              to="/"
+              to="/home"
             >
               Home
             </NavLink>
@@ -34,7 +35,10 @@ function App() {
         </header>
         <div className={st.main}>
           <Routes>
-            <Route path="/" element={<Table />} />
+            <Route path="/" element={<Banner />} />
+          </Routes>
+          <Routes>
+            <Route path="/home" element={<Table />} />
           </Routes>
           <Routes>
             <Route path="/game" element={<Game />} />
