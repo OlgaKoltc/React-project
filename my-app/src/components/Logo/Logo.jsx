@@ -4,7 +4,7 @@ import st from "./style.module.scss";
 
 export default function Logo() {
   return (
-    <div className={st.content}>
+    <div className={st.conteiner}>
       <img src={logo} />
     </div>
   );

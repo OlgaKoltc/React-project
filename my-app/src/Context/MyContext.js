@@ -14,6 +14,7 @@ export function ContextProvider({ children }) {
                 setData(words)
             }
             catch (err) {
+                alert('Что-то пошло не так, пожалуйста перезагрузите страницу...')
                 console.error(err);
             }
 

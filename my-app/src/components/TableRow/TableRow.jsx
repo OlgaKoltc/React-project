@@ -6,32 +6,33 @@ export default function TableRow({ item }) {
   const { english, transcription, russian, id } = item;
   const [valueImput, setValueImput] = useState();
   const [words, setWords] = useState({});
+  const [err, setErr] = useState("error");
 
   const getEditWord = () => {
     setIsEdit(!isEdit);
   };
 
   useEffect(() => {
-    let words = {
+    setWords({
       english: item.english,
       transcription: item.transcription,
       russian: item.russian,
-    };
-
-    // let words = [item.id, item.english, item.transcription, item.russian];
-    // setWords(words);
-
-    setWords(words);
-    console.log(words);
+    });
   }, []);
 
   function saveWord() {
-    if (valueImput == "") {
-      //el.classList.add("error");
-      console.log("error"); //не знаю как добавить красную рамку конкретному импуту
-    } else {
-      setIsEdit(!isEdit);
-      getWord();
+    const input = document.getElementsByTagName("input");
+    for (let i = 0; i < input.length; i++) {
+      const thisInput = input[i];
+
+      if (thisInput.value == "") {
+        setErr(thisInput.classList.add(err));
+        setIsEdit(isEdit);
+        console.log(thisInput);
+      } else {
+        setIsEdit(!isEdit);
+        getWord();
+      }
     }
   }
 
@@ -43,7 +44,6 @@ export default function TableRow({ item }) {
   const getWord = () => {
     let wordValue = valueImput;
     setValueImput(wordValue);
-    console.log(wordValue);
   };
 
   return (

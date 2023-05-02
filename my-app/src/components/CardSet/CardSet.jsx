@@ -7,11 +7,9 @@ export default function CardSet() {
   const [count, setCount] = useState(0);
   const [quantity, setQuantity] = useState(0);
 
-  //useEffect(() => (onChangeCard(), [count]));
-
   const handleCount = () => setQuantity((quantity) => quantity + 1);
 
-  function handlePrev() {
+  const handlePrev = () => {
     {
       if (count > 0) {
         setCount((count - 1) % word.length);
@@ -19,11 +17,11 @@ export default function CardSet() {
         setCount(word.length - 1);
       }
     }
-  }
+  };
 
-  function handleNext() {
+  const handleNext = () => {
     setCount((count + 1) % word.length);
-  }
+  };
 
   return (
     <>

@@ -5,9 +5,8 @@ import {
   Route,
   NavLink,
 } from "react-router-dom";
-import { Table, Game } from "../index";
+import { Table, Game, Logo } from "../index";
 import st from "./style.module.scss";
-import logo from "../../style/img/logo.svg";
 import Banner from "../Banner/Banner";
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
         <header className={st.header}>
           <div className={st.nav}>
             <NavLink to="/">
-              <img src={logo} width={70} height={70} />
+              <Logo />
             </NavLink>
             <NavLink
               style={({ isActive }) => ({ color: isActive ? "red" : "blue" })}
