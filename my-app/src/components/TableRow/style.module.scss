@@ -14,7 +14,9 @@
         border-top: none;
         border-left: none;
     }
-    .error .translate {
+    .word .error,
+    .transcription.error,
+    .translate.error {
         border: 1px solid red;
     }
  

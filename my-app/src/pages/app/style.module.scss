@@ -14,7 +14,7 @@
   .header {
     flex-basis: 20%;
     padding-top: 20px;
-
+  
     .nav {
       display: flex;
       justify-content: space-around;
@@ -55,4 +55,30 @@
 
 .header a:hover {
   text-decoration: underline;
+}
+
+// @media screen and (max-width: 768px) {
+//   .header {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     z-index: 10;
+//   }
+//   .container {
+//     margin-top: 20px;
+//   }
+// }
+@media screen and (max-width: 390px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+footer {
+  display: none;
+}
 }

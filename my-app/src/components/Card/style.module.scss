@@ -60,3 +60,16 @@
     box-shadow: 0 0 7px rgba(221, 13, 131, 0.5);
 
 }
+@media screen and (max-width: 768px) {
+    .container_card {
+        max-width: 100%;
+        width: 140px;
+        min-height: 20vh;
+    }
+    .theme,
+    .card_btn,
+    .transcription,
+    .translate  {
+        margin: 0 auto;
+    }
+}

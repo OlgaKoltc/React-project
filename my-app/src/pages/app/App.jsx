@@ -15,6 +15,9 @@ function App() {
       <div className={st.container}>
         <header className={st.header}>
           <div className={st.nav}>
+            <div className={st.nav__burger}>
+              <span></span>
+            </div>
             <NavLink to="/">
               <Logo />
             </NavLink>

@@ -20,27 +20,27 @@ export default function TableRow({ item }) {
     });
   }, []);
 
-  function saveWord() {
+  const saveWord = () => {
     const input = document.getElementsByTagName("input");
     for (let i = 0; i < input.length; i++) {
       const thisInput = input[i];
 
       if (thisInput.value == "") {
         setErr(thisInput.classList.add(err));
-        setIsEdit(isEdit);
-        console.log(thisInput);
-      } else {
         setIsEdit(!isEdit);
+        console.log(thisInput.className);
+      } else {
+        setIsEdit(isEdit);
         getWord();
       }
     }
-  }
+  };
 
   function handleChange(event) {
     setValueImput(event.target.value);
   }
 
-  //тут была идея добавить в массив откорректированное слово из импута
+  //тут хочу добавить в массив откорректированное слово из импута
   const getWord = () => {
     let wordValue = valueImput;
     setValueImput(wordValue);
@@ -61,7 +61,7 @@ export default function TableRow({ item }) {
         <>
           <input
             type="text"
-            className={st.word}
+            className={`${st.word} ${err}`}
             defaultValue={english}
             onChange={handleChange}
           />
